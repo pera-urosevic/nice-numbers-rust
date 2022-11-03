@@ -36,6 +36,11 @@ pub fn even(n: u32) -> bool {
     return n % 2 == 0;
 }
 
+/// https://en.wikipedia.org/wiki/Parity_(mathematics)
+pub fn odd(n: u32) -> bool {
+    return n % 2 != 0;
+}
+
 /// https://en.wikipedia.org/wiki/Factorial
 pub fn factorial(n: u32) -> bool {
     if n < 1 {
@@ -126,6 +131,14 @@ mod tests {
     }
 
     #[test]
+    fn test_odd() {
+        assert_eq!(odd(0), false);
+        assert_eq!(odd(1), true);
+        assert_eq!(odd(2), false);
+        assert_eq!(odd(101), true);
+    }
+
+    #[test]
     fn test_factorial() {
         assert_eq!(factorial(0), false);
         assert_eq!(factorial(1), true);
@@ -162,11 +175,6 @@ mod tests {
 
     #[test]
     fn test_square() {
-        // expect(checkSquare(0)).toBeTruthy()
-        // expect(checkSquare(1)).toBeTruthy()
-        // expect(checkSquare(2)).toBeFalsy()
-        // expect(checkSquare(3)).toBeFalsy()
-        // expect(checkSquare(4)).toBeTruthy()
         assert_eq!(square(0), true);
         assert_eq!(square(1), true);
         assert_eq!(square(2), false);
