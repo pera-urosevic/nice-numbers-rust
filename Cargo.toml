@@ -1,0 +1,13 @@
+[package]
+name = "nice-numbers"
+version = "1.0.0"
+edition = "2021"
+authors = ["pera.urosevic@gmail.com"]
+description = "Small library for number sequences"
+keywords = ["numbers", "sequences", "series", "sets"]
+categories = ["mathematics"]
+documentation = "https://docs.rs/nice-numbers"
+repository = "https://github.com/rust-lang/cargo/"
+license = "MIT"
+
+[dependencies]
