@@ -7,7 +7,7 @@ description = "Small library for number sequences"
 keywords = ["numbers", "sequences", "series", "sets"]
 categories = ["mathematics"]
 documentation = "https://docs.rs/nice-numbers"
-repository = "https://github.com/rust-lang/cargo/"
+repository = "https://github.com/pera-urosevic/nice-numbers-rust"
 license = "MIT"
 
 [dependencies]
