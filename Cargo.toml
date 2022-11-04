@@ -1,6 +1,6 @@
 [package]
 name = "nice-numbers"
-version = "1.0.2"
+version = "1.0.3"
 edition = "2021"
 authors = ["pera.urosevic@gmail.com"]
 description = "Small library for number sequences"
