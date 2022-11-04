@@ -22,27 +22,27 @@ fn iterate_next(initial: Vec<u32>, fn_next: SequenceNext, start: u32, length: u3
     return items;
 }
 
-/// http://oeis.org/A000578
+/// <https://oeis.org/A000578>
 pub fn cube_member(nth: u32) -> u32 {
     return nth * nth * nth;
 }
 
-/// http://oeis.org/A000578
+/// <https://oeis.org/A000578>
 pub fn cube(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(cube_member, nth, length);
 }
 
-/// http://oeis.org/A005843
+/// <https://oeis.org/A005843>
 pub fn even_member(nth: u32) -> u32 {
     return 2 * nth;
 }
 
-/// http://oeis.org/A005843
+/// <https://oeis.org/A005843>
 pub fn even(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(even_member, nth, length);
 }
 
-/// http://oeis.org/A000142
+/// <https://oeis.org/A000142>
 pub fn factorial_member(nth: u32) -> u32 {
     if nth == 0 {
         return 1;
@@ -50,18 +50,18 @@ pub fn factorial_member(nth: u32) -> u32 {
     return nth * factorial_member(nth - 1);
 }
 
-/// http://oeis.org/A000142
+/// <https://oeis.org/A000142>
 pub fn factorial_next(members: Vec<u32>, nth: u32) -> u32 {
     return members[members.len() - 1] * nth;
 }
 
-/// http://oeis.org/A000142
+/// <https://oeis.org/A000142>
 pub fn factorial(nth: u32, length: u32) -> Vec<u32> {
     let initial: Vec<u32> = Vec::from([factorial_member(nth)]);
     return iterate_next(initial, factorial_next, nth + 1, length - 1);
 }
 
-/// http://oeis.org/A000045
+/// <https://oeis.org/A000045>
 pub fn fibonacci_member(nth: u32) -> u32 {
     if nth == 0 {
         return 0;
@@ -72,64 +72,64 @@ pub fn fibonacci_member(nth: u32) -> u32 {
     return fibonacci_member(nth - 1) + fibonacci_member(nth - 2);
 }
 
-/// http://oeis.org/A000045
+/// <https://oeis.org/A000045>
 pub fn fibonacci_next(members: Vec<u32>, _: u32) -> u32 {
     return members[members.len() - 2] + members[members.len() - 1];
 }
 
-/// http://oeis.org/A000045
+/// <https://oeis.org/A000045>
 pub fn fibonacci(nth: u32, length: u32) -> Vec<u32> {
     let initial: Vec<u32> = Vec::from([fibonacci_member(nth), fibonacci_member(nth + 1)]);
     return iterate_next(initial, fibonacci_next, nth + 2, length - 2);
 }
 
-/// http://oeis.org/A000027
+/// <https://oeis.org/A000027>
 pub fn natural_member(nth: u32) -> u32 {
     return nth;
 }
 
-/// http://oeis.org/A000027
+/// <https://oeis.org/A000027>
 pub fn natural(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(natural_member, nth, length);
 }
 
-/// http://oeis.org/A005408
+/// <https://oeis.org/A005408>
 pub fn odd_member(nth: u32) -> u32 {
     return 2 * nth + 1;
 }
 
-/// http://oeis.org/A005408
+/// <https://oeis.org/A005408>
 pub fn odd(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(odd_member, nth, length);
 }
 
-/// https://oeis.org/A000079
+/// <https://oeis.org/A000079>
 pub fn powers2_member(nth: u32) -> u32 {
     return 2u32.pow(nth);
 }
 
-/// https://oeis.org/A000079
+/// <https://oeis.org/A000079>
 pub fn powers2_next(members: Vec<u32>, _: u32) -> u32 {
     return members[members.len() - 1] * 2;
 }
 
-/// https://oeis.org/A000079
+/// <https://oeis.org/A000079>
 pub fn powers2(nth: u32, length: u32) -> Vec<u32> {
     let initial: Vec<u32> = Vec::from([powers2_member(nth)]);
     return iterate_next(initial, powers2_next, nth + 1, length - 1);
 }
 
-/// http://oeis.org/A000290
+/// <https://oeis.org/A000290>
 pub fn square_member(nth: u32) -> u32 {
     return nth * nth;
 }
 
-/// http://oeis.org/A000290
+/// <https://oeis.org/A000290>
 pub fn square(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(square_member, nth, length);
 }
 
-/// http://oeis.org/A003154
+/// <https://oeis.org/A003154>
 pub fn star_member(nth: u32) -> u32 {
     if nth == 0 {
         return 0;
@@ -137,22 +137,22 @@ pub fn star_member(nth: u32) -> u32 {
     return 6 * nth * (nth - 1) + 1;
 }
 
-/// http://oeis.org/A003154
+/// <https://oeis.org/A003154>
 pub fn star(nth: u32, length: u32) -> Vec<u32> {
     return iterate_member(star_member, nth, length);
 }
 
-/// https://oeis.org/A000217
+/// <https://oeis.org/A000217>
 pub fn triangular_member(nth: u32) -> u32 {
     return (nth * (nth + 1)) / 2;
 }
 
-/// https://oeis.org/A000217
+/// <https://oeis.org/A000217>
 pub fn triangular_next(members: Vec<u32>, nth: u32) -> u32 {
     return members[members.len() - 1] + nth;
 }
 
-/// https://oeis.org/A000217
+/// <https://oeis.org/A000217>
 pub fn triangular(nth: u32, length: u32) -> Vec<u32> {
     let initial: Vec<u32> = Vec::from([triangular_member(nth)]);
     return iterate_next(initial, triangular_next, nth + 1, length - 1);

@@ -1,9 +1,9 @@
-/// https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy
+/// <https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy>
 pub fn answer(n: u32) -> bool {
     return n == 42;
 }
 
-/// https://en.wikipedia.org/wiki/Composite_number
+/// <https://en.wikipedia.org/wiki/Composite_number>
 pub fn composite(n: u32) -> bool {
     if n <= 3 {
         return false;
@@ -24,24 +24,24 @@ pub fn composite(n: u32) -> bool {
     return false;
 }
 
-/// https://en.wikipedia.org/wiki/Cube_(algebra)
+/// <https://en.wikipedia.org/wiki/Cube_(algebra)>
 pub fn cube(n: u32) -> bool {
     let cube_root: u32 = f64::from(n).cbrt().floor() as u32;
     let cubed_cube_root: u32 = cube_root * cube_root * cube_root;
     return cubed_cube_root == n;
 }
 
-/// https://en.wikipedia.org/wiki/Parity_(mathematics)
+/// <https://en.wikipedia.org/wiki/Parity_(mathematics)>
 pub fn even(n: u32) -> bool {
     return n % 2 == 0;
 }
 
-/// https://en.wikipedia.org/wiki/Parity_(mathematics)
+/// <https://en.wikipedia.org/wiki/Parity_(mathematics)>
 pub fn odd(n: u32) -> bool {
     return n % 2 != 0;
 }
 
-/// https://en.wikipedia.org/wiki/Factorial
+/// <https://en.wikipedia.org/wiki/Factorial>
 pub fn factorial(n: u32) -> bool {
     if n < 1 {
         return false;
@@ -63,12 +63,12 @@ pub fn factorial(n: u32) -> bool {
     }
 }
 
-/// https://en.wikipedia.org/wiki/Fibonacci_number
+/// <https://en.wikipedia.org/wiki/Fibonacci_number>
 pub fn fibonacci(n: u32) -> bool {
     return square(5 * n * n + 4) || square(5 * n * n - 4);
 }
 
-/// https://en.wikipedia.org/wiki/Prime_number
+/// <https://en.wikipedia.org/wiki/Prime_number>
 pub fn prime(n: u32) -> bool {
     if n == 2 || n == 3 {
         return true;
@@ -88,7 +88,7 @@ pub fn prime(n: u32) -> bool {
     return true;
 }
 
-/// https://en.wikipedia.org/wiki/Square_number
+/// <https://en.wikipedia.org/wiki/Square_number>
 pub fn square(n: u32) -> bool {
     let square_root: u32 = f64::from(n).sqrt().floor() as u32;
     return square_root * square_root == n;
